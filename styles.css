@@ -1,9 +1,13 @@
+.hidden{
+  display: none;
+}
+
+
 .mapouter {
   position: relative;
   text-align: right;
   height: 500px;
   width: 600px;
-  display: none;
 }
 
 .gmap_canvas {
