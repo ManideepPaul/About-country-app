@@ -7,6 +7,18 @@ const countryName = document.querySelector('.name');
 const latLang = document.querySelector('.latLang');
 const flag = document.querySelector('.flag');
 const description = document.querySelector('.description');
+const countries = document.querySelector('.countries');
+
+// Fetching all country names from API.
+fetch("https://restcountries.com/v2/all?fields=name")
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(country => {
+                const p = document.createElement('p');
+                p.innerText = country.name;
+                countries.appendChild(p);
+            })
+        })
 
 
 input.addEventListener('change', () => {
@@ -22,7 +34,7 @@ input.addEventListener('change', () => {
     //Setting the map source.
     map.src = `https://maps.google.com/maps?q=${value}&t=&z=4&ie=UTF8&iwloc=&output=embed`;
     
-    //Fetching the data from the api
+    //Fetching data based on user input from the API.
     fetch(`https://restcountries.com/v3.1/name/${value}?fullText=true`)
     .then(res => res.json())
     .then(data => {
@@ -55,4 +67,5 @@ input.addEventListener('change', () => {
     flag.classList.remove('hidden')
     description.classList.remove('hidden')
 })
+
 
