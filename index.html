@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Deep-thought-assignment</title>
-  </head>
-  <body>
-    <main class="mainContainer">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Deep-thought-assignment</title>
+</head>
+
+<body>
+  <main class="mainContainer">
+    <nav>
+      <h1><header class="heading">Country info finder</header></h1>
+    </nav>
+    <div class="content">
       <aside class="leftContent">
         <input type="search">
         <div class="countries"></div>
       </aside>
-      <aside class="rightSide">
+      <aside class="rightContent">
+        <img class="mapImg" src="./assets/map.jpeg" alt="">
         <h1 class="name hidden"></h1>
-        <h3 class="langHeader hidden">Languages</h3>
+        <h4 class="langHeader hidden">Languages:</h4>
         <ul class="languages hidden"></ul>
-        <h4 class="latLang hidden"></h4>
+        <h4 class="latLang hidden">Latitude & Longitude: </h4>
+        <p class="latData hidden"></p>
         <img class="flag hidden" src="" alt="Flag">
         <p class="description hidden"></p>
         <div class="mapouter hidden">
           <div class="gmap_canvas">
-            <iframe
-              width="600"
-              height="500"
-              id="gmap_canvas"
-              src="https://maps.google.com/maps?q=india&t=&z=4&ie=UTF8&iwloc=&output=embed"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-            ></iframe>
+            <iframe width="600" height="500" id="gmap_canvas"
+              src="https://maps.google.com/maps?q=india&t=&z=4&ie=UTF8&iwloc=&output=embed" frameborder="0"
+              scrolling="no" marginheight="0" marginwidth="0"></iframe>
           </div>
         </div>
       </aside>
-    </main>
-    <script src="./script.js"></script>
-  </body>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
 </html>

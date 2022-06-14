@@ -4,10 +4,12 @@ const mapOuter = document.querySelector('.mapouter');
 const ul = document.querySelector('.languages');
 const langHeader = document.querySelector('.langHeader');
 const countryName = document.querySelector('.name');
+const latData = document.querySelector('.latData');
 const latLang = document.querySelector('.latLang');
 const flag = document.querySelector('.flag');
 const description = document.querySelector('.description');
 const countries = document.querySelector('.countries');
+const mapImg = document.querySelector('.mapImg');
 
 // Fetching all country names from API.
 fetch("https://restcountries.com/v2/all?fields=name")
@@ -49,7 +51,7 @@ input.addEventListener('change', () => {
         }
 
         //The gps location
-        latLang.innerText = `Latitude & Longitude: ${data[0].latlng}`;
+        latData.innerText = `${data[0].latlng}`;
 
         //The flag image
         flag.src = `${(data[0].flags.svg)}`;
@@ -59,11 +61,13 @@ input.addEventListener('change', () => {
     })
 
     //Removing the hidden class after the country search.
+    mapImg.classList.add('hidden')
     countryName.classList.remove('hidden')
     ul.classList.remove('hidden')
     langHeader.classList.remove('hidden')
     mapOuter.classList.remove('hidden')
     latLang.classList.remove('hidden')
+    latData.classList.remove('hidden')
     flag.classList.remove('hidden')
     description.classList.remove('hidden')
 })
