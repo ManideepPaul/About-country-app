@@ -13,7 +13,14 @@
   color: rgb(249, 243, 236);
 }
 
-nav{
+/* To hide elements from DOM */
+
+.hidden{
+  display: none;
+}
+
+/* navbar section */
+.nav{
   background-color: #845EC2;
 }
 
@@ -24,9 +31,28 @@ nav{
   text-transform: uppercase;
 }
 
+
+/* Content section */
+
+.content {
+  display: flex;
+}
+
+/* Leftcontent  */
+
 .leftContent{
   padding: 15px;
 }
+
+.search {
+  margin-bottom: 10px;
+  padding: 4px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+/* Rigntcontent  */
 
 .rightContent{
   padding: 15px;
@@ -51,14 +77,6 @@ h4{
 
 .languages{
   padding-left: 20px;
-}
-.hidden{
-  display: none;
-}
-
-
-.content {
-  display: flex;
 }
 
 .flag{
